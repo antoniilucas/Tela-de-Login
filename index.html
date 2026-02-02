@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Facil</title>
-    <link rel="stylesheet" href="./style.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
     <div class="tela-login">
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome">
-        <br> <br>
-        <input type="text" placeholder="Senha">
-        <br> <br>
-        <button>Enviar</button>
+      <h1>Login</h1>
+      <form id="login-form">
+        <input type="text" id="usuario" placeholder="Usuario" />
+        <br />
+        <br />
+        <input type="password" id="senha" placeholder="Senha" />
+        <br />
+        <br />
+        <button type="submit">Entrar</button>
+
+        <p id="mensagem"></p>
+      </form>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
