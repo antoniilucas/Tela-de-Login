@@ -1,37 +1,76 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(45deg, cyan, yellow);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.tela-login {
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: #0f172a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #020617;
     padding: 80px;
-    border-radius: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    color: #f8fafc;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 25px; 
+    /* margin bottom colocar magin no h1 */
+}
+
+/* p {
+    display: flex;
+    justify-content: center;
+} */
+
+input {
+    padding: 14px;
+    width: 100%;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    background-color: #020617;
     color: white;
 }
 
-input {
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #3b82f6;
 }
 
 button {
-    background-color: dodgerblue;
-    border: none;
-    padding: 15px;
-    width: 100%;
-    border-radius: 10px;
-    color: white;
-    font-size: 15px;
+  background-color: #3b82f6;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  margin-top: 15px;
 }
 
 button:hover {
-    background-color: deepskyblue;
-    cursor: pointer;
+  background-color: #2563eb;
+  cursor: pointer;
+}
+
+#mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
 }

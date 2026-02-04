@@ -24,4 +24,3 @@ form.addEventListener("submit", function (event) {
 
 });
 
-console.log("JS conectado com sucesso!");
