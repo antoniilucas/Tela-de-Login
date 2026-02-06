@@ -12,27 +12,39 @@
       <div class="login">
         <img src="" alt="" />
         <h1>Acesse sua Conta</h1>
-        <p>Que bom ter você de volta!</p>
-        <form id="login-form">
-          <input type="text" id="usuario" placeholder="Usuario" />
+        <p id="paragrafo-left">Que bom ter você de volta!</p>
+        <form id="login-form" class="login-form">
+          <p>E-mail</p>
+          <input type="text" id="usuario" placeholder="Insira seu e-mail" />
           <br />
           <br />
-          <input type="password" id="senha" placeholder="Senha" />
+          <p>Senha</p>
+          <input type="password" id="senha" placeholder="Insira sua senha" />
           <br />
           <br />
           <button type="submit">Entrar</button>
 
-          <p id="mensagem"></p>
+          <!-- <p id="mensagem"></p> -->
         </form>
       </div>
       <div class="marketing">
-        <h1>Crie, lance e escale seu produto digital!</h1>
+        <h1>
+          Crie, lance e escale seu produto <br />digital de maneira
+          <span id="palavra-dinamica">rápida</span>
+        </h1>
+        <br />
         <p>
-          “A Kirvano foi a plataforma que mais me apoiou em toda minha
-          trajetória no digital.”
+          “O Tonyn foi a plataforma que mais me apoiou em toda minha trajetória
+          no digital.”
         </p>
         <!-- 5 estrelas assinatura do antonii -->
         <img src="" alt="" />
+      </div>
+      <div id="toast" class="toast">
+        <div class="toast-icon">!</div>
+        <div class="toast-text">
+          Essas credenciais não correspondem ao seu login.
+        </div>
       </div>
     </div>
 
