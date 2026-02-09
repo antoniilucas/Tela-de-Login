@@ -5,13 +5,43 @@ const form = document.getElementById("login-form");
 const inputUsuario = document.getElementById("usuario");
 const inputSenha = document.getElementById("senha");
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
+function validarEmail(valor) {
+    return valor.includes("@") && valor.includes(".");
+}
 
-    const usuarioDigitado = inputUsuario.value;
-    const senhaDigitada = inputSenha.value;
+function validarSenha(valor) {
+    return valor.length >= 8;
+}
 
-    if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let valido = true;
+
+    // EMAIL
+    if (!validarEmail(inputUsuario.value)) {
+        inputUsuario.parentElement.classList.add("invalid");
+        valido = false;
+    } else {
+        inputUsuario.parentElement.classList.remove("invalid");
+    }
+
+    // SENHA
+    if (!validarSenha(inputSenha.value)) {
+        inputSenha.parentElement.classList.add("invalid");
+        valido = false;
+    } else {
+        inputSenha.parentElement.classList.remove("invalid");
+    }
+
+    // Se falhou validação → PARA AQUI
+    if (!valido) return;
+
+    // LOGIN
+    if (
+        inputUsuario.value === usuarioCorreto &&
+        inputSenha.value === senhaCorreta
+    ) {
         alert("Login validado ✅");
     } else {
         mostrarErro();
@@ -19,7 +49,8 @@ form.addEventListener("submit", function (event) {
 });
 
 
-// palavras dinamicas
+// Palavras Dinamicas
+
 
 const palavras = ["rápida", "simples", "segura", "lucrativa", "eficiente"];
 let index = 0;
@@ -47,3 +78,44 @@ function mostrarErro() {
         toast.classList.remove("show");
     }, 3000);
 }
+
+function mostrarEntrada() {
+    const toast = document.getElementById("toast");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}
+
+
+// Dinamismo sobre erro e invalidades
+
+const email = document.getElementById("email");
+const senha = document.getElementById("senha");
+
+function validarEmail(valor) {
+    return valor.includes("@") && valor.includes(".");
+}
+
+function validarSenha(valor) {
+    return valor.length >= 8;
+}
+
+document.getElementById("login-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // emaill
+    if (!validarEmail(email.value)) {
+        email.parentElement.classList.add("invalid");
+    } else {
+        email.parentElement.classList.remove("invalid");
+    }
+
+    // Senha
+    if (!validarSenha(senha.value)) {
+        senha.parentElement.classList.add("invalid");
+    } else {
+        senha.parentElement.classList.remove("invalid");
+    }
+});

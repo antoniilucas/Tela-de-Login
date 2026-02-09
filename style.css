@@ -52,6 +52,46 @@ body {
     margin: 0 auto;
 }
 
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+
+.field input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background-color: #020617;
+    color: white;
+}
+
+/* estado inválido */
+.field.invalid input {
+    border-color: #fb7185;
+    background-color: rgba(251, 113, 133, 0.08);
+}
+
+/* mensagem de erro */
+.field .error {
+    display: none;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #fb7185;
+}
+
+/* mostrar erro */
+.field.invalid .error {
+    display: block;
+}
+
 .marketing {
     flex: 1;
     display: flex;

@@ -10,22 +10,32 @@
   <body>
     <div class="container">
       <div class="login">
-
         <div class="login-header">
-          <img src="./img/Logos (5).png" alt="logo-tyn" id="logo-tyn"/>
+          <img src="./img/Logos (5).png" alt="logo-tyn" id="logo-tyn" />
           <h1 class="titulo-esquerda">Acesse sua Conta</h1>
           <p id="paragrafo-left">Que bom ter você de volta!</p>
         </div>
 
         <form id="login-form" class="login-form">
-          <p>E-mail</p>
+
+          <div class="field">
+          <label for="">E-mail</label>
+          <!-- <p>E-mail</p> -->
           <input type="text" id="usuario" placeholder="Insira seu e-mail" />
-          <br />
-          <br />
-          <p>Senha</p>
-          <input type="password" id="senha" placeholder="Insira sua senha" />
-          <br />
-          <br />
+          <small class="error">E-mail inválido.</small>
+          <!-- <br />
+          <br /> -->
+          </div>
+
+          <div class="field">
+            <label for="">Senha</label>
+            <!-- <p>Senha</p> -->
+            <input type="password" id="senha" placeholder="Insira sua senha" />
+            <small class="error">A senha deve conter no mínimo 8 caracteres.</small>
+          </div>
+
+          <!-- <br />
+          <br /> -->
           <button type="submit">Entrar</button>
 
           <!-- <p id="mensagem"></p> -->
