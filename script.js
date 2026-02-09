@@ -1,4 +1,4 @@
-const usuarioCorreto = "tonylindo@gmail.com";
+const usuarioCorreto = "a@gmail.com";
 const senhaCorreta = "12345678";
 
 const form = document.getElementById("login-form");
@@ -18,7 +18,6 @@ form.addEventListener("submit", function (e) {
 
     let valido = true;
 
-    // EMAIL
     if (!validarEmail(inputUsuario.value)) {
         inputUsuario.parentElement.classList.add("invalid");
         valido = false;
@@ -26,7 +25,6 @@ form.addEventListener("submit", function (e) {
         inputUsuario.parentElement.classList.remove("invalid");
     }
 
-    // SENHA
     if (!validarSenha(inputSenha.value)) {
         inputSenha.parentElement.classList.add("invalid");
         valido = false;
@@ -34,23 +32,21 @@ form.addEventListener("submit", function (e) {
         inputSenha.parentElement.classList.remove("invalid");
     }
 
-    // Se falhou validação → PARA AQUI
     if (!valido) return;
 
-    // LOGIN
     if (
         inputUsuario.value === usuarioCorreto &&
         inputSenha.value === senhaCorreta
     ) {
-        alert("Login validado ✅");
+        mostrarToast("toast-entrada");
+        // alert("Login validado ✅");
     } else {
-        mostrarErro();
+        mostrarToast("toast");
     }
 });
 
 
 // Palavras Dinamicas
-
 
 const palavras = ["rápida", "simples", "segura", "lucrativa", "eficiente"];
 let index = 0;
@@ -70,8 +66,9 @@ setInterval(() => {
 
 // Toast de erro
 
-function mostrarErro() {
-    const toast = document.getElementById("toast");
+
+function mostrarToast(id) {
+    const toast = document.getElementById(id);
     toast.classList.add("show");
 
     setTimeout(() => {
@@ -79,14 +76,24 @@ function mostrarErro() {
     }, 3000);
 }
 
-function mostrarEntrada() {
-    const toast = document.getElementById("toast");
-    toast.classList.add("show");
 
-    setTimeout(() => {
-        toast.classList.remove("show");
-    }, 3000);
-}
+// function mostrarErro() {
+//     const toast = document.getElementById("toast");
+//     toast.classList.add("show");
+
+//     setTimeout(() => {
+//         toast.classList.remove("show");
+//     }, 3000);
+// }
+
+// function mostrarEntrada() {
+//     const toast = document.getElementById("toast-entrada");
+//     toast.classList.add("show");
+
+//     setTimeout(() => {
+//         toast.classList.remove("show");
+//     }, 3000);
+// }
 
 
 // Dinamismo sobre erro e invalidades

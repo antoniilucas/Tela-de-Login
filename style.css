@@ -164,18 +164,55 @@ input:focus {
 }
 
 .toast-icon {
-    background: #fb7185;
+    /* background: #fb7185; */
     color: white;
     font-weight: bold;
     padding: 24px;
     font-size: 18px;
 }
 
+.toast.erro .toast-icon {
+    background: #fb7185;
+
+}
+
+.toast.sucesso .toast-icon {
+    background: #2fa500;
+}
+
+
 .toast-text {
     padding: 16px 20px;
     font-size: 14px;
     max-width: 260px;
 }
+
+
+/* Dupliquei? */
+
+/* .toast-entrada {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    color: #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-entrada.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+} */
+
 
 button {
     background-color: #3b82f6;
