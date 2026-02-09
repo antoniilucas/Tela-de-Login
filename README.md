@@ -69,6 +69,7 @@ A autenticação é **simulada localmente** no JavaScript, sem banco de dados ou
 1. Clone ou baixe este repositório  
 2. Abra o arquivo `index.html` no navegador  
 3. Utilize as credenciais simuladas no JavaScript para testar o login
+4. [Login funcionando!](https://antoniilucas.github.io/Tela-de-Login/)
 
 ---
 
