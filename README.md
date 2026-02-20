@@ -4,6 +4,9 @@ Este projeto consiste em uma **tela de login moderna** desenvolvida com **HTML, 
 
 ---
 
+Email:a@gmail.com
+Senha:12345678
+
 ## 🧩 Funcionalidades
 
 - ✅ Layout dividido em **duas partes (50% / 50%)**
